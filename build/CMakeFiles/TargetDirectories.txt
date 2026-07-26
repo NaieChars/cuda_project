@@ -1,0 +1,3 @@
+D:/CG/cuda_project/build/CMakeFiles/cuda_project.dir
+D:/CG/cuda_project/build/CMakeFiles/ALL_BUILD.dir
+D:/CG/cuda_project/build/CMakeFiles/ZERO_CHECK.dir

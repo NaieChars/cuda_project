@@ -1,0 +1,10 @@
+^D:\CG\CUDA_PROJECT\CMAKELISTS.TXT
+setlocal
+C:\Dev\cmake\bin\cmake.exe -SD:/CG/cuda_project -BD:/CG/cuda_project/build --check-stamp-file D:/CG/cuda_project/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
