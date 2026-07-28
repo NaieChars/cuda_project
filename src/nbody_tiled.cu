@@ -119,7 +119,7 @@ int main()
     const float G = 1.0f;
     const float softening = 0.2f;
     const float dt = 0.01f;
-    const int FRAME_COUNT = 20;
+    const int FRAME_COUNT = 3;
     const float CENTER_MASS = 5000.0f;
     const float ORBIT_MASS = 0.02f; // 和naive版本保持一致的修正值
 
