@@ -30,6 +30,7 @@ set_target_properties(nbody_naive PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )
 
+# tiled 版本
 add_executable(nbody_tiled
     src/nbody_tiled.cu
 )
@@ -38,5 +39,17 @@ target_compile_options(nbody_tiled PRIVATE
     $<$<COMPILE_LANGUAGE:CXX>:/utf-8>
 )
 set_target_properties(nbody_tiled PROPERTIES
+    CUDA_SEPARABLE_COMPILATION ON
+)
+
+# uniform grid 空间划分 - 用thrust按cellIndex排序
+add_executable(grid_sort
+    src/grid_sort.cu
+)
+target_compile_options(grid_sort PRIVATE
+    $<$<COMPILE_LANGUAGE:CUDA>:-Xcompiler=/utf-8 -Xcompiler=/Zc:preprocessor>
+    $<$<COMPILE_LANGUAGE:CXX>:/utf-8>
+)
+set_target_properties(grid_sort PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )
